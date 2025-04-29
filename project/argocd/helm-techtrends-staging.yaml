@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: techtrends-staging
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/twehrmaker/nd064_course_1.git' # <-- Adjust this!
+    targetRevision: HEAD
+    path: project/helm
+    helm:
+      valueFiles:
+        - values-staging.yaml
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: staging
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
