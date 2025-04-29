@@ -30,7 +30,7 @@ jobs:
         uses: docker/build-push-action@v6.16.0
         with:
           context: ./project
-          file: ./project/Dockerfile
+          file: ./project/techtrends/Dockerfile
           platforms: linux/amd64
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/techtrends:latest
