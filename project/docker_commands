@@ -1,11 +1,52 @@
 ## Docker commands used to build the application 
-# TODO: insert the docker build command
+
+docker run -d -p 7111:3111 --name techtrends-app techtrends
 
 ## Docker commands used to run the application
-# TODO: insert the docker run command
+
+docker build -t techtrends .
 
 ## Docker commands used to get the application logs
-# TODO: insert the docker logs command
+
+docker logs techtrends-app -f 
 
 ## Logs from the container running the TechTrends application
-# TODO: paste logs from the Docker container 
+
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+WARNING:2025-04-29 07:30:47,149  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:2025-04-29 07:30:47,149  * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+INFO:2025-04-29 07:31:00,769 172.17.0.1 - - [29/Apr/2025 07:31:00] "GET /create HTTP/1.1" 200 -
+INFO:2025-04-29 07:31:00,794 172.17.0.1 - - [29/Apr/2025 07:31:00] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:2025-04-29 07:31:00,807 172.17.0.1 - - [29/Apr/2025 07:31:00] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:2025-04-29 07:31:03,746 172.17.0.1 - - [29/Apr/2025 07:31:03] "GET / HTTP/1.1" 200 -
+INFO:2025-04-29 07:31:03,759 172.17.0.1 - - [29/Apr/2025 07:31:03] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:2025-04-29 07:31:33,199 Article 2020 CNCF Annual Report retrieved!
+INFO:2025-04-29 07:31:33,203 172.17.0.1 - - [29/Apr/2025 07:31:33] "GET /1 HTTP/1.1" 200 -
+INFO:2025-04-29 07:31:33,220 172.17.0.1 - - [29/Apr/2025 07:31:33] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:2025-04-29 07:31:45,488 About page accessed 
+INFO:2025-04-29 07:31:45,490 172.17.0.1 - - [29/Apr/2025 07:31:45] "GET /about HTTP/1.1" 200 -
+INFO:2025-04-29 07:31:45,498 172.17.0.1 - - [29/Apr/2025 07:31:45] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:2025-04-29 07:31:48,876 172.17.0.1 - - [29/Apr/2025 07:31:48] "GET /create HTTP/1.1" 200 -
+INFO:2025-04-29 07:31:48,892 172.17.0.1 - - [29/Apr/2025 07:31:48] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:2025-04-29 07:31:54,589 172.17.0.1 - - [29/Apr/2025 07:31:54] "GET / HTTP/1.1" 200 -
+INFO:2025-04-29 07:31:54,620 172.17.0.1 - - [29/Apr/2025 07:31:54] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:2025-04-29 07:32:03,336 172.17.0.1 - - [29/Apr/2025 07:32:03] "GET /create HTTP/1.1" 200 -
+INFO:2025-04-29 07:32:03,350 172.17.0.1 - - [29/Apr/2025 07:32:03] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:2025-04-29 07:32:44,230 Article Kubernetes NGX released created!
+INFO:2025-04-29 07:32:44,231 172.17.0.1 - - [29/Apr/2025 07:32:44] "POST /create HTTP/1.1" 302 -
+INFO:2025-04-29 07:32:44,237 172.17.0.1 - - [29/Apr/2025 07:32:44] "GET / HTTP/1.1" 200 -
+INFO:2025-04-29 07:32:44,250 172.17.0.1 - - [29/Apr/2025 07:32:44] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:2025-04-29 07:32:55,090 Article CNCF Cloud Native Definition v1.0 retrieved!
+INFO:2025-04-29 07:32:55,091 172.17.0.1 - - [29/Apr/2025 07:32:55] "GET /5 HTTP/1.1" 200 -
+INFO:2025-04-29 07:32:55,105 172.17.0.1 - - [29/Apr/2025 07:32:55] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:2025-04-29 07:32:58,979 Article "9" not found!
+INFO:2025-04-29 07:32:58,984 172.17.0.1 - - [29/Apr/2025 07:32:58] "GET /9 HTTP/1.1" 404 -
+INFO:2025-04-29 07:32:58,997 172.17.0.1 - - [29/Apr/2025 07:32:58] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:2025-04-29 07:33:06,593 Article "10" not found!
+INFO:2025-04-29 07:33:06,595 172.17.0.1 - - [29/Apr/2025 07:33:06] "GET /10 HTTP/1.1" 404 -
+INFO:2025-04-29 07:33:06,610 172.17.0.1 - - [29/Apr/2025 07:33:06] "GET /static/css/main.css HTTP/1.1" 304 -
