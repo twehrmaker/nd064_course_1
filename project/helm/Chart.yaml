@@ -1,0 +1,9 @@
+apiVersion: v1
+name: techtrends
+description: A Helm chart for deploying the TechTrends application
+keywords:
+  - techtrends
+version: 1.0.0
+maintainers:
+  - name: Tristan Wehrmaker
+    email: 3stan@3stan.net
