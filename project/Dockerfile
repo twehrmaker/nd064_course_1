@@ -3,10 +3,10 @@ FROM python:3.10-slim
 
 
 # Copy the files into the container
-COPY ./techtrends ./dist
+COPY ./techtrends /dist
 
 # Set the working directory in the container
-WORKDIR ./dist
+WORKDIR /dist
 
 # Install the required Python packages
 RUN pip install --no-cache-dir -r requirements.txt
